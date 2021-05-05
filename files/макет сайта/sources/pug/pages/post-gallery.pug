@@ -1,0 +1,23 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 4
+	- var page_active = "Gallery format"
+	- var rd_navbar_class_ajuster = 'rd-navbar-variant-1'
+	- var section_class_ajuster = "bg-light"
+
+block title
+	title= page_active
+
+block page
+	include ../elements/_header-corporate
+		+breadcrumb_items(2,'index.html','Home','News')
+
+	// Page Content
+	main.page-content
+
+		include ../section/blog/_section-blog-gallery-single
+
+
+	// Page Footer
+	include ../elements/_footer-1

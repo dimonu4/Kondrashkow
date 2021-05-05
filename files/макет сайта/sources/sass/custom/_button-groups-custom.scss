@@ -1,0 +1,45 @@
+.btn-group-variant{
+  @include transform(translateY(-30px));
+  margin-bottom: -30px;
+  margin-left: -30px;
+
+  .btn  {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+}
+.btn-group-variant-1{
+  @include transform(translateY(-10px));
+  margin-bottom: -10px;
+  margin-left: 28px;
+
+  .btn-link  {
+    margin-top: 10px;
+    margin-left: -28px;
+  }
+}
+.btn-group-variant-2{
+  @include transform(translateY(-16px));
+  margin-bottom: -16px;
+  margin-left: -16px;
+
+  .btn  {
+    margin-top: 16px;
+    margin-left: 16px;
+  }
+}
+
+.btn-group-isotope{
+  @include transform(translateY(-10px));
+  margin-bottom: -10px;
+  margin-left: -30px;
+
+  .btn-link  {
+    margin-top: 10px;
+    margin-left: 30px;
+  }
+}
+
+.group-sm {
+
+}

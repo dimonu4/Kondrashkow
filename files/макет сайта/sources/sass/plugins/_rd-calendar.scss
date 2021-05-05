@@ -1,0 +1,367 @@
+/*
+* @subsection   RD Calendar
+*
+*
+* @author       Evgeniy Gusarov
+* @see          https://ua.linkedin.com/pub/evgeniy-gusarov/8a/a40/54a
+* @version      1.0.0
+*/
+@import "../_variables.scss";
+
+.rd-calendar {
+
+  &.show-events {
+
+  }
+}
+
+// Today
+.rdc-today_day {
+
+}
+
+.rdc-today_date {
+
+}
+
+.rdc-month {
+  text-align: right;
+}
+
+.rdc-fullyear {
+  text-align: left;
+}
+
+// Panel
+.rdc-panel {
+
+}
+
+.rdc-month,
+.rdc-fullyear {
+  display: inline-block;
+
+  font-size: 22px;
+  @media (min-width: $screen-sm-min) {
+    font-size: 40px;
+  }
+}
+
+// Controls
+.rdc-panel {
+  position: relative;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  @media (min-width: 640px) {
+    max-width: 440px;
+  }
+  @media (min-width: $screen-md-min) {
+    max-width: 770px;
+  }
+}
+
+.rdc-next, .rdc-prev, .rdc-events_close {
+  color: $brand-primary;
+  font: 400 18px/38px "FontAwesome";
+  cursor: pointer;
+  transition: .3s all ease;
+
+  &:hover {
+    color: $gray-dark;
+  }
+}
+
+.rdc-next,
+.rdc-prev {
+  position: absolute;
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+
+.rdc-next {
+  right: 10px;
+  &:before {
+    content: '\f054';
+  }
+}
+
+.rdc-prev {
+  left: 10px;
+  &:before {
+    content: '\f053';
+  }
+}
+
+.rdc-events_close {
+  &:before {
+    content: '\f00d';
+  }
+}
+
+// Events
+.rdc-events {
+  display: none;
+}
+
+.rdc-table_has-events {
+
+  .rdc-table_date {
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate(0);
+    background-color: $white;
+    color: $brand-primary;
+    cursor: pointer;
+    transition: 250ms;
+
+    &:hover {
+      background-color: $brand-primary;
+      color: $white;
+    }
+  }
+
+  ul {
+    position: absolute;
+    top: 46px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 10px;
+    background-color: $brand-primary;
+    opacity: 0;
+    transition: .3s ease-out all;
+    @media (min-width: 640px) {
+      top: 95px;
+      border-radius: $border-radius-large;
+    }
+    @media (min-width: $screen-md-min) {
+      top: 100px;
+      padding: 10px;
+    }
+
+    li {
+      padding: 0 10px;
+      background-color: $white;
+      @media (min-width: $screen-md-min) {
+        padding: 0 40px;
+      }
+      .table-responsive {
+        border: none;
+      }
+
+      table {
+        margin-bottom: 0;
+        thead {
+          th {
+            text-align: center;
+            padding: 10px 10px;
+            @media (min-width: $screen-md-min) {
+              text-align: left;
+              padding: 26px 30px;
+            }
+
+            span.h4 {
+              font-size: 24px;
+            }
+          }
+        }
+        tr {
+          display: table-row;
+          border-bottom: 1px solid $gray;
+          &.disabled {
+            time {
+              color: $gray;
+            }
+            button {
+              visibility: hidden;
+            }
+          }
+          &:nth-child(2n) {
+            border-bottom: 1px solid $gray;
+
+            td {
+              background-color: transparent;
+            }
+          }
+          &:last-of-type{
+            border-bottom: none;
+          }
+        }
+        td {
+          display: block;
+          border: none;
+          time {
+            color: $gray-base;
+            font-weight: 600;
+          }
+          &:nth-child(2) {
+            color: $gray;
+          }
+          @media (min-width: $screen-md-min) {
+            display: table-cell;
+            vertical-align: middle;
+          }
+        }
+        @media (min-width: $screen-md-min) {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+
+  .rdc-table_events-count {
+    height: 0;
+    color: $white;
+    transition: .3s ease-out all;
+
+  }
+
+  &.opened {
+    ul,
+    .rdc-table_events-count { opacity: 1; }
+
+    .rdc-table_date {
+      background-color: $brand-primary;
+      color: $white;
+    }
+  }
+}
+
+.rdc-event {
+
+  &.active {
+    display: block;
+  }
+}
+
+.rdc-table_event {
+  table {
+    tr td {
+      width: auto;
+      height: auto;
+    }
+    tr th {
+      background-color: transparent;
+    }
+  }
+}
+
+// Table
+.rdc-table {
+  margin-top: 20px;
+  margin-left: -10px;
+  position: relative;
+  width: 100%;
+
+  @media (min-width: 350px) {
+    margin-left: 0;
+  }
+  @media (min-width: $screen-sm-min) {
+    margin-top: 40px;
+  }
+  > table {
+    border-spacing: 2px;
+    border-collapse: separate;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    @media (min-width: 640px) {
+      border-spacing: 10px;
+    }
+
+    td {
+      width: 41px;
+      height: 41px;
+      vertical-align: top;
+      border-top: none;
+      @media (min-width: 640px) {
+        width: 75px;
+        height: 75px;
+      }
+      @media (min-width: $screen-md-min) {
+        width: 100px;
+        height: 80px;
+      }
+    }
+  }
+
+  th {
+    padding-left: 3px;
+    background-color: $gray-base;
+    color: $white;
+    min-width: 41px;
+
+    @media (min-width: 640px) {
+      width: 75px;
+      border-radius: $border-radius-small;
+      padding: 7px;
+    }
+    @media (min-width: $screen-md-min) {
+      width: 100px;
+      height: 50px;
+    }
+  }
+
+  tr {
+    position: relative;
+    display: inline-block;
+  }
+}
+
+.rdc-month {
+
+}
+
+.rdc-fullyear {
+
+}
+
+.rdc-table_day {
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+  @media (min-width: 640px) {
+    width: 82px;
+  }
+  @media (min-width: $screen-md-min) {
+    font-size: 20px;
+    width: 120px;
+  }
+}
+
+.rdc-table_date {
+  font-weight: 700;
+  font-size: 20px;
+  padding: 5px;
+  color: $gray-base;
+  background-color: $gray-lighter;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 32px;
+  min-width: 40px;
+  @media (min-width: 640px) {
+    line-height: 65px;
+    border-radius: $border-radius-small;
+  }
+  @media (min-width: $screen-md-min) {
+    font-size: 36px;
+    line-height: 72px;
+  }
+
+}
+
+.rdc-table_today {
+  position: relative;
+  background-color: $brand-primary;
+  color: $white;
+
+}
+
+.rdc-table_next,
+.rdc-table_prev {
+  opacity: .5;
+}
+

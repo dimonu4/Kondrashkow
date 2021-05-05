@@ -1,0 +1,11 @@
+mixin media_team( class_media, src, title, position, img_class, body_class)
+  .media(class=class_media)
+    .media-left
+      img(src=src)(class=img_class)(alt="")
+    .media-body(class=body_class)
+      h6= title
+      span.text-gray= position
+      if block
+        block
+      else
+        p

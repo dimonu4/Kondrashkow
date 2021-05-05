@@ -1,0 +1,74 @@
+section.section-50.section-sm-bottom-100.text-center
+  .shell
+    h2 Contact us
+    hr.hr.hr-primary.divider-lg.offset-top-22
+    .range.range-xs-center.offset-top-20.text-sm-left
+      .cell-md-4.cell-lg-3
+        h3 Find us
+        .range.offset-top-30
+          .cell-sm-6.cell-md-12
+            .unit.unit-sm-horizontal.unit-spacing-md.unit-sm-top
+              .unit-left.min-width-sm
+                span.icon.icon-sm.text-primary.fa-map-o
+              .unit-body
+                h5 Address:
+                a(href='#').text-gray 55 Bloomfield Ave, Pinedale, WY 82941, United States
+            .unit.unit-sm-horizontal.unit-spacing-md.unit-sm-top.offset-top-30.offset-sm-top-18
+              .unit-left.min-width-sm
+                span.icon.icon-sm.text-primary.fa-phone
+              .unit-body
+                h5 Call Us Today:
+                a(href='callto:#').text-gray.display-block 555-123-5353
+                a(href='callto:#').text-gray.display-block 555-12-2323
+
+            .unit.unit-sm-horizontal.unit-spacing-md.unit-sm-top.offset-top-30.offset-sm-top-18
+              .unit-left.min-width-sm
+                span.icon.icon-sm.text-primary.fa-envelope-o
+              .unit-body
+                h5 Contact e-mail:
+                a(href='mailto:#') info@demolink.org
+          .cell-sm-6.cell-md-12.offset-top-30.offset-sm-top-0.offset-md-top-18
+            .unit.unit-sm-horizontal.unit-spacing-md.unit-sm-top
+              .unit-left.min-width-sm
+                span.icon.icon-sm.text-primary.fa-clock-o
+              .unit-body
+                h5 Opening Hours:
+                time(datetime='2016').display-block.offset-top-4 Monday - Friday: 9am-6pm
+                time(datetime='2016').display-block.offset-top-4 Saturday: 10am-4pm
+                time(datetime='2016').display-block.offset-top-4 Sunday: 10am-1pm
+          .cell-xs-12.offset-top-15.offset-sm-top-25.offset-lg-top-45
+            a(href='appointment.html').btn.btn-md.btn-primary-variant-2 Book an Appointment
+      .cell-md-8.cell-lg-preffix-1
+        h3.text-center  Get in touch with us
+        // RD Mailform
+        form.rd-mailform.text-left.form-contact-line.offset-top-30(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+          .form-inline-login
+            .form-group
+              label.form-label.form-label-outside(for="contact-name") First name
+              input#contact-name.form-control(type="text" name="first-name" placeholder='First name' data-constraints="@Required")
+            .form-group
+              label.form-label.form-label-outside(for="contact-name1") Last Name
+              input#contact-name1.form-control(type="text" name="last-name" placeholder='Last Name' data-constraints="@Required")
+
+          .form-inline-login.offset-top-18.offset-xs-top-30.offset-sm-top-12
+            .form-group
+              label.form-label.form-label-outside(for="contact-mail") Email Address
+              input#contact-mail.form-control(type="email" name="email" placeholder='mail@demolink.org' data-constraints="@Required @Email")
+
+            .form-group
+              label.form-label.form-label-outside(for="contact-subject") Subject
+              input#contact-subject.form-control(type="text" name="subject" placeholder='Subject'
+              data-constraints="@Required")
+          .form-group.offset-top-18.offset-xs-top-30.offset-sm-top-12
+            label.form-label.form-label-outside(for="contact-message") Message
+            textarea#contact-message.form-control(name="message" placeholder='Your message' data-constraints="@Required")
+
+          button(type="submit").btn.btn-primary-variant-2.btn-md Send
+
+section
+  // RD Google Map
+  .rd-google-map(class="rd-google-map__model", data-zoom='15', data-x='-73.9874068', data-y='40.643180', data-styles='')
+    ul.map_locations
+      li(data-x='-73.9874068', data-y='40.643180')
+        p
+          | 9870 St Vincent Place, Glasgow, DC 45 Fr 45.

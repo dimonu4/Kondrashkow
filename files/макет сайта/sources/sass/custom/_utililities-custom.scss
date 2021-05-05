@@ -1,0 +1,74 @@
+// align elements
+//------------------------------
+
+.justify-between{
+  @include justify-content(space-between);
+}
+.justify-around{
+  @include justify-content(space-around);
+}
+.justify-start{
+  @include justify-content(flex-start);
+}
+.justify-center{
+  @include justify-content(center);
+}
+.align-center{
+  @include align-items(center);
+}
+
+.display-flex{
+  @include display-flex;
+
+  @media (min-width: $screen-xs-min) {
+    &-xs {
+      @include display-flex;
+    }
+  }
+}
+
+.reverse-xs {
+  @media (min-width: $screen-xs-min) {
+    @include flex-direction(row-reverse);
+  }
+}
+.range-stretch{
+  @include align-items(stretch);
+}
+
+//-----------------------------
+
+.display-block{
+  display: block;
+}
+
+.page {
+  .pos-relative {
+    position: relative;
+  }
+}
+
+.border-dashed {
+  border: 2px dashed rgba($gray-base,.1);
+}
+
+
+// img
+//-------------------------------
+
+.img-fullwidth {
+  width: 100%;
+}
+
+.img-responsive{
+  @include img-responsive(inline-block);
+}
+
+// fullscreen
+//----------------
+
+.page-fullscreen {
+  @media (min-height: 768px) and (min-width: 768px) {
+    height: calc(100vh - 201px - 89px);
+  }
+}

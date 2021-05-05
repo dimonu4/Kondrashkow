@@ -1,0 +1,82 @@
+.counter{
+  margin-bottom: 0;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+  color: $brand-primary;
+   &:after{
+     content: '%';
+   }
+}
+
+.counter-wrap{
+  position: relative;
+  @include display-flex;
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+  width: 120px;
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  &:before{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    @include transform(rotate(45deg));
+    content: "";
+    display: inline-block;
+    border: 1px solid rgba($white,.3);
+
+  }
+
+  p {
+    margin-top: 5px;
+    position: relative;
+    color: $white;
+  }
+}
+
+// Countdown
+//-------------------
+
+.countdown-section {
+  display: inline-block;
+  & + .countdown-section {
+    .countdown-amount {
+      &:before {
+        content: ":";
+        display: inline-block;
+        color: $brand-primary;
+        font-size: 54px;
+        padding: 0 15px;
+      }
+    }
+    .countdown-period {
+      &:before {
+        content: "";
+        display: inline-block;
+        padding: 0 20px;
+      }
+    }
+  }
+}
+.countdown-amount,
+.countdown-period {
+  display: block;
+}
+
+.countdown-amount {
+  color: $brand-primary;
+  font-size: 54px;
+}
+
+.countdown-period {
+  color: $gray;
+  font-size: 14px;
+  margin-top: -9px;
+}

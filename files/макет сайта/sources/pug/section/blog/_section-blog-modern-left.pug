@@ -1,0 +1,91 @@
+//- Includes
+include ../../elements/_ui-post-modern-timeline
+include ../../elements/_ui-pager-bootstrap
+
+// Section Blog Modern
+section
+  .post-modern-timeline-date.text-sm-left
+    time.text-bold(datetime="2016-01-01") July 25
+
+  +post-modern-timeline("post-modern-timeline-left", 'blog-post.html', "mdi mdi-video","4 days ago", "Summer Desserts Made Easy", [
+    {"title": "Restaurant ", "href": 'blog-post.html'},
+    {"title": "desserts", "href": 'blog-post.html'}],
+  {
+    "type": "video",
+    "href": "//www.youtube.com/embed/-AhmuMqZB0s",
+    "ratio": "16by9"
+  },
+  "Sandra Green",
+  {
+    "width": 69,
+    "height": 69,
+    "src": "images/blog-classic-3-69x69.jpg",
+    "alt": "Sandra Green"
+  })
+    p Ponte`s Pastry Chef, Holly Caporale, knows that summer is not the time to spend hours in the kitchen, not when sun, surf and sand call upon our heartstrings! At the same time, quality, freshness and flavor are elements to never compromise on when it comes to her sweet creations.
+
+
+  .post-modern-timeline-date.text-sm-left
+    time.text-bold(datetime="2016-01-01") July 20
+
+  +post-modern-timeline("post-modern-timeline-left", 'blog-post.html', "mdi mdi-image","4 days ago", "Hot Days Call for Frozen Drinks", [
+    {"title": "Restaurant", "href": 'blog-post.html'},
+    {"title": "drinks", "href": 'blog-post.html'}],
+    {
+      "type": "thumbnail",
+      "thumb": { "src": "images/blog-modern-2-570x328.jpg", "width": 570, "height": 328, "alt": "" }
+    },
+    "John Doe",
+    {
+      "width": 69,
+      "height": 69,
+      "src": "images/blog-classic-4-69x69.jpg",
+      "alt": "John Doe"
+    })
+    p We`re all experiencing the heat. Recently, you folks who call southern California "home" were treated to 100+ degree weather. At the same time, the weather out east was around 88...with suffocating humidity. I think I`d take 100+ dry heat over the humidity any day. Point is, cold drinks were in order for all of us last week.
+
+  .post-modern-timeline-date.text-sm-left
+    time.text-bold(datetime="2016-01-01") July 15
+
+  +post-modern-timeline("post-modern-timeline-left", 'blog-post.html', "mdi mdi-image","5 days ago", "new year in toscana", [
+    {"title": "restaurant", "href": 'blog-post.html'},
+    {"title": "mexican", "href": 'blog-post.html'},
+    {"title": "new year", "href": 'blog-post.html'}],
+    {
+      "type": "soundcloud",
+      "embed": '<iframe height="166" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149065581&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>'
+    },
+    "John Nelson",
+    {
+      "width": 69,
+      "height": 69,
+      "src": "images/blog-classic-5-69x69.jpg",
+      "alt": "John Nelson"
+    })
+
+  .post-modern-timeline-date.text-sm-left
+    time.text-bold(datetime="2016-01-01") July 10
+
+  +post-modern-timeline("post-modern-timeline-left", 'blog-post.html', "mdi mdi-pen", "4 days ago","As American as It Gets", [
+    {"title": "happy hour", "href": 'blog-post.html'},
+    {"title": "summer", "href": 'blog-post.html'},
+    {"title": "food", "href": 'blog-post.html'}],
+  null,
+  "Sandra Green",
+  {
+    "width": 69,
+    "height": 69,
+    "src": "images/blog-classic-3-69x69.jpg",
+    "alt": "Sandra Green"
+  })
+    p Growing up, the 4th of July was my favorite holiday. School was out for the summer and the date always meant a large family get together with tons of food, lots of laughs and fireworks. Now that I`m an adult and don`t live near my family, Independence Day is somewhat different.
+
+
+footer.offset-top-42
+  //- Add timeline post offset
+  .post-modern-timeline-left
+    +pager-bootstrap(null,
+      {"title": "Older", "href": "#", "icon": "icon mdi mdi-chevron-left"},
+      {"title": "Newer", "href": "#", "icon": "icon mdi mdi-chevron-right"},
+      true
+    )

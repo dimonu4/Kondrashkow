@@ -1,0 +1,223 @@
+//Pricing table
+
+.pricing-table {
+  max-width: 400px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 35px 15px 30px;
+  text-align: center;
+
+  * + .pricing-value {
+    margin-top: 20px;
+  }
+  * + .pricing-body {
+    margin-top: 44px;
+  }
+  p + .btn {
+    margin-top: 40px;
+  }
+
+  &.active {
+    background-color: $brand-primary;
+    padding-top: 47px;
+    *,
+    span:nth-child(n+1) {
+      color: $white;
+    }
+    .btn-primary-variant-2 {
+      @include button-variant-custom($white, transparent, $white, $brand-primary, $white, $white);
+    }
+  }
+
+
+  @media (min-width: $screen-md-min) {
+    margin: 0;
+    padding:  67px 35px 45px;
+    &.active {
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+  }
+}
+
+.pricing-header{
+  h4{
+    font-size: 26px;
+  }
+}
+.pricing-body {
+  margin-top: 32px;
+}
+
+.pricing-value {
+  margin-top: 27px;
+  span {
+    display: block;
+
+    &:first-of-type{
+      color: $gray-dark;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    &:nth-child(2){
+      color: $brand-primary;
+      font-size: 76px;
+      font-weight: 300;
+      line-height: 1;
+    }
+    &:last-of-type{
+      margin-top: 3px;
+      color: $gray;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+  }
+}
+
+
+
+
+//carousel
+//------------------------------------
+.pricing-wrapper {
+  .slick-list {
+    padding: 20px 0 !important;
+  }
+  .slick-slider {
+    min-height: 700px;
+    margin-bottom: 0;
+  }
+
+  .slick-arrow {
+    position: absolute;
+    top: calc(100% - 60px);
+    height: 30px;
+    &:before {
+      display: inline-block;
+      font-family: $material;
+      width: 27px;
+      height: 27px;
+      line-height: 24px;
+      border-radius: 50%;
+      border: 1px solid $brand-primary;
+      font-size: 18px;
+      color: $brand-primary;
+      transition: 250ms;
+      opacity: 1;
+    }
+    &:hover {
+      &:before {
+        color: $white;
+        background-color: $brand-primary;
+      }
+    }
+    &.slick-prev {
+      &:after {
+        position: absolute;
+        top: 52%;
+        left: -160px;
+        width: 145px;
+        content: "";
+        display: inline-block;
+        border-top: 1px solid $gray-light;
+      }
+    }
+    &.slick-next {
+      &:after {
+        position: absolute;
+        top: 52%;
+        right: -160px;
+        width: 145px;
+        content: "";
+        display: inline-block;
+        border-top: 1px solid $gray-light;
+      }
+    }
+
+  }
+  .slick-prev {
+    left: 39.5%;
+    &:before {
+      content: "\e5cb";
+    }
+  }
+  .slick-next {
+    right: 40%;
+    &:before {
+      content: "\e5cc";
+    }
+  }
+  @media (min-width: $screen-xs-min) {
+    .slick-slider {
+      min-height: 660px;
+    }
+  }
+
+  @media (min-width: $screen-sm-min) {
+    .slick-slider {
+      min-height: 640px;
+    }
+    .slick-arrow {
+      top: 100%;
+    }
+    .slick-prev {
+      left: 45.5%;
+    }
+    .slick-next {
+      right: 46%;
+    }
+  }
+  @media (min-width: $screen-lg-min) {
+    .slick-arrow {
+      top: calc(100% - 20px);
+    }
+    .slick-prev {
+      left: 47.5%;
+    }
+    .slick-next {
+      right: 47.5%;
+    }
+  }
+}
+
+.slick-center {
+  .pricing-table {
+    position: relative;
+    z-index: 1;
+    background-color: $brand-primary;
+    color: $white;
+    transition: 150ms 350ms;
+    h5 {
+      color: $white;
+    }
+    .pricing-value {
+      span {
+        color: $white;
+      }
+    }
+    .btn-white {
+      @include button-variant-custom($brand-primary, $white, $brand-primary, $white, $brand-primary, $white);
+    }
+    .pricing-value {
+      .h1 + .h5 {
+        margin-top: 0;
+      }
+    }
+    @media (max-width: $screen-md-min) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (min-width: $screen-md-min + 1 ) {
+      margin: 0;
+      max-width: 452px;
+      margin: -19px -22px;
+      padding: 70px 72px 61px;
+      * + .pricing-body {
+        margin-top: 49px;
+      }
+
+    }
+  }
+}

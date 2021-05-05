@@ -1,0 +1,38 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 0
+	- var page_active = "Search results"
+	- var rd_navbar_class_ajuster = 'rd-navbar-variant-1'
+	- var section_class_ajuster = "bg-light"
+block title
+	title= page_active
+
+block page
+
+	// Page Header
+	include ../elements/_header-corporate
+		+breadcrumb_items(1,'index.html','Home')
+
+
+	// Page Content
+	main.page-content.search-page
+		section.text-left.section-top-50.section-bottom-83.section-sm-top-75
+			.shell
+				h3.text-center Search results
+				.range.range-xs-center.offset-top-32
+					.cell-sm-10.cell-md-8
+						// RD Search Form
+						form.form-search.rd-search(action="search-results.html" method="GET")
+							.form-inline-flex-xs
+								div.form-group
+									label.form-label.form-search-label(for="form-label-sm")
+									input(class="form-search-input form-control" id="form-label-sm" type="text" name="s" autocomplete="off")
+								button(type="submit").btn.btn-md.btn-primary-variant-1.btn-min-width Search
+						.inset-left-15.inset-xs-left-0
+							.rd-search-results.offset-top-55
+					.cell-xs-12.offset-top-47
+						hr.hr-gray.hr-fullwidth
+
+	// Page Footer
+	include ../elements/_footer-1

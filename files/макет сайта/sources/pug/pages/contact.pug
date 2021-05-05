@@ -1,0 +1,19 @@
+extends  ../_skeleton
+block variables
+	- var activeIndex = 5
+	- var page_active = "Contact us"
+	- var rd_navbar_class_ajuster = 'rd-navbar-variant-1'
+	- var section_class_ajuster = "bg-light"
+block title
+	title= page_active
+block page
+
+	// Page Header
+	include ../elements/_header-corporate
+		+breadcrumb_items(1,'index.html','Home')
+
+	main.page-content
+		include ../section/contact/_section-contact-1
+
+	// Page Footers
+	include ../elements/_footer-1

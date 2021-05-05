@@ -1,0 +1,17 @@
+.flickr {
+  margin-left: -4px;
+  margin-bottom: -4px;
+  @include transform(translateY(-4px));
+
+  .flickr-item {
+    display: inline-block;
+    width: 84px;
+    height: 83px;
+    margin-left: 4px;
+    margin-top: 4px;
+    overflow: hidden;
+  }
+  img {
+    width: 100%;
+  }
+}

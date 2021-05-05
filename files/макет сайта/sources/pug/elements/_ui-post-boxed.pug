@@ -1,0 +1,35 @@
+//- Post Boxed
+//- url - expanded post link
+//- date - date of publishment
+//- title - post title
+//- author - authors name
+//- tags - array of {link}
+//- image - {image} object
+
+mixin post-boxed(url, date, title, author, tags, image)
+  // Post Boxed
+  .reveal-block
+    div.post.post-boxed
+      // Post media
+      header.post-media
+        img.img-responsive(width=image.width, height=image.height, src=image.src, alt=image.alt)
+
+      // Post content
+      section.post-content.text-left
+        if tags
+          .post-tags.group-lg.group-tags
+            each tag in tags
+              a(href='#').btn-link.btn-link-primary.btn-link-variant-1= tag.title
+
+        .post-body
+          // Post Title
+          .post-title
+            a(href='blog-post.html').h6.text-uppercase.text-white-sm= title
+
+          .post-meta
+            ul.list-inline.list-inline-sm.p
+              li.text-bold.text-middle.font-logo by&nbsp;
+                 span.text-primary.text-bold= author
+              li
+                span.text-middle.icon-sm.mdi.mdi-clock.text-primary
+                time.text-middle.text-white-sm.text-bold(datetime="2016-01-01" class="")= date

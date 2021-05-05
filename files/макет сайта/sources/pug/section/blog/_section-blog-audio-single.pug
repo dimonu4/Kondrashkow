@@ -1,0 +1,149 @@
+//- Includes
+
+include ../../elements/_ui-post-default
+include ../../elements/_ui-soundcloud-player-classic
+include ../../elements/_widget-post
+include ../../elements/_ui-box-comment
+include ../../elements/_ui-tags
+
+// Blog Default Single
+section.section-50.section-sm-top-70.section-sm-bottom-40.text-center.text-sm-left
+  .shell
+    .range.range-xs-center
+      .cell-md-8
+        // Post Classic
+        article.post.post-list.single-post-def
+          .post-title
+            h3 Audio post
+          ul.list-inline.post-meta
+            li
+              span.text-gray.text-middle by &nbsp;
+              a(href="#").text-base.text-middle Admin
+            li
+              time.text-middle.text-gray(datetime="2016-01-01") April 5, 2016
+            li
+              a.text-gray.text-middle(href="post-default.html") Water damage
+          .post-body
+            +soundcloud-player-classic(
+            {"embed": '<iframe height="166" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149065581&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>'}
+            )
+            p Designing a bathroom can easily become a truly daunting task, especially if space and cost are of concern. There's a whole multitude of different decisions that need to be taken when we're talking about a bathroom redesign.
+            p So usually this (relatively) simple process complicates things to decide, like choosing a faucet, to proper plumbing and selecting a vanity. The following tips are designed to help you make the most of your new bathroom looks...
+
+            +jpg('plumbers-1-1170x780','img-responsive img-fullwidth offset-top-30')
+
+            h3.offset-top-25 Faucet Selection
+
+            p Traditionally a bathroom sink uses a single central-mount faucet.
+            p Which, in turn, has a single lever or two handles. Central-mount models are good for three-hole sinks specifically. So keep this in mind when you'll be assessing your bathroom's styling.
+            p Then again, the wall mounted faucets have spouts that are longer and are designed specifically to extend far enough over the bowl. That's so they reach the vessel-style or freestanding sink.
+            p As your third option for a bathroom faucet, single-hole faucets have both the spout and handles combined into one universal fixture.
+            p This kind of solution is a perfect way of dealing with the sinks which are small in size.
+
+            h3.offset-top-25 Choosing a vanity
+
+            p If your bathroom's space is restricted to a small size, then the vanity provides a great opportunity to cut on some extra space.
+            p A pedestal or wall mount sink will work just great, in a situation when space is a concern.
+            p An under mount sink is relatively easy to clean up, simply because those do not collect much dirt.
+            p However,  you'll need a waterproof countertop. Under mount sinks can also be pricey and more difficult to get installed, so keep this little obstacle in mind when purchasing it...
+
+            h3.offset-top-25 Is porcelain a smart investment?
+
+            p  While without any doubt porcelain is the classic material for bathroom sinks, it is not the only option out there...
+            p Glass and stainless steel sinks often come at a much more attainable, reasonable price level. Also, damage-wise, they're also much ore durable long-term...
+            p Those are also the most popular choices for modern designs such as vessel sinks that look like bowls and pitchers.
+            p It is important to remember, that sinks made out of a glass are too fragile and will not live through any heavy object hitting them or falling down at it...
+            p.text-bold All in all, whether you want a hand with your bathroom redesign, need helpful DIY plumbing tips, or advice on a faucet repair or install, our company's plumbing experts can help!
+            p.text-bold They will be your guides and plumbing fairies in all of the residential plumbing needs, that you might ever have!
+
+            .post-footer.display-flex-xs.reverse-xs.justify-between.align-center
+              .post-comments.font-size-14
+                span.icon.text-primary.text-middle.fa-comment &nbsp;
+                span.text-primary.text-middle 2 comments
+              div.font-size-14
+                .unit.unit-horizontal.unit-spacing-sm.justify-center
+                  .unit-left
+                    span.gray Tags:
+                  .unit-body
+                    a(href='post-default.html') Sink
+            ul.list-inline.list-inline-md.offset-sm-top-32
+              li:  a(href='#').icon.icon-13.icon-primary.fa-facebook
+              li:  a(href='#').icon.icon-13.icon-primary.fa-twitter
+              li:  a(href='#').icon.icon-13.icon-primary.fa-google-plus
+              li:  a(href='#').icon.icon-13.icon-primary.fa-pinterest-p
+              li:  a(href='#').icon.icon-13.icon-primary.fa-linkedin
+
+            .post-author.offset-top-50
+              .unit.unit-sm-horizontal.unit-spacing-md
+                .unit-left
+                  +jpg('author-1-150x150','img-circle img-responsive')
+                .unit-body
+                  h5.text-white Written by Admin
+                  p We've hired Denis just a few years ago, as he had a vital skill that we were looking for at that moment - fixing the commercial plumbing fixtures and emergencies... Since that time Denis has proven himself to be a young, but a crucial part of our big friendly team of plumbers. In addition to all of that, Denis also curates our company's online blog...
+
+            .nav-links.display-flex.justify-between.align-center.offset-top-40
+              a(href='post-default.html').prev-post.text-left
+                span.icon.mdi.mdi-chevron-left.text-base.text-middle
+                span.text-middle Do you have kids? Then you need a thermostat!
+
+              a(href='post-default.html').next-post.text-right
+                span.text-middle Tips for Redesigning Your Bathroom
+                span.icon.mdi.mdi-chevron-right.text-base.text-middle
+            .offset-top-30
+              hr.hr.hr-gray.hr-fullwidth
+
+
+        section.section-50
+
+          #comments
+
+          h5.text-left.text-base 2 Reviews
+
+          .offset-top-34
+            //- Comment 1
+            +box-comment(
+            "box-comment-outboxed",
+            {
+              "width": 86,
+              "height": 86,
+              "src": "images/author-1-150x150.jpg",
+              "alt": "Rita Black"
+            },
+            "Apr 05, 2016",
+            "by Damien Tools ",
+            "Thanks, these tips are on money! I'm in the middle of my Bathroom's renovation right now!"
+            )
+              //- Reply 1
+              +box-comment(
+              "box-comment-outboxed",
+              {
+                "width": 86,
+                "height": 86,
+                "src": "images/author-1-150x150.jpg",
+                "alt": "John Nelson"
+              },
+              "Apr 05, 2016",
+              "by John Popps ",
+              "Oh man, I feel for you. Did mine for 12 weeks straight last summer..."
+              )
+          .offset-top-30
+            hr.hr.hr-gray.hr-fullwidth
+          h5.offset-top-34.offset-lg-top-40.text-left.text-base Leave a Reply
+
+          form.rd-mailform.offset-top-20.text-left.form-comment(data-form-output="form-contact-me", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .form-group
+              label.form-label(for="comment-message") Comment
+              textarea#comment-message.form-control(data-constraints="@Required" name="comment")
+            .form-group-50.offset-top-30
+              label.form-label(for="contact-name") Your name*
+              input#contact-name.form-control(type="text" name="name" data-constraints="@Required")
+            .form-group-50.offset-top-30
+              label.form-label(for="contact-mail") Your e-mail*
+              input#contact-mail.form-control(type="email" name="email"  data-constraints="@Required @Email")
+            .form-group-50.offset-top-30
+              label.form-label(for="contact-name1") Your website*
+              input#contact-name1.form-control(type="text" name="website" placeholder='' data-constraints="@Required")
+            .group-sm.offset-top-30
+              button(type="submit").btn.btn-md.btn-primary.text-white Submit Comment
+      .cell-md-4
+        include ../../section/aside/_section-blog-sidebar-variant-1

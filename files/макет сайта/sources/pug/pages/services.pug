@@ -1,0 +1,47 @@
+extends  ../_skeleton
+include ../elements/_ui-thumbnail-services
+block variables
+	- var activeIndex = 3
+	- var page_active = "Services"
+	- var rd_navbar_class_ajuster = 'rd-navbar-variant-1'
+	- var section_class_ajuster = "bg-light"
+block title
+	title= page_active
+block page
+	// Page Header
+	include ../elements/_header-corporate
+		+breadcrumb_items(1,'index.html','Home')
+	// Page Content
+	main.page-content
+		section.section-66.section-sm-top-70.section-sm-bottom-83.text-center
+			.shell
+				h3 Our plumbing services can cover absolutely any piping or drainage, water supply #[br.visible-lg-inline] issue that can possibly occur, either within your home or a commercial location!
+				.range.offset-top-34
+					.cell-sm-6.cell-lg-3
+						+ui-thumbnail-services('services-1-250x167','service-1.html','Commercial Plumbing','')
+							p Our plumbing company offers a variety of services for commercial companies. We do Crawl Space Plumbing, Handicap Plumbing & Copper Piping among everything else...
+					.cell-sm-6.cell-lg-3.offset-top-40.offset-sm-top-0
+						+ui-thumbnail-services('services-2-250x167','service-2.html','Water Damage Restoration','')
+							p When you are dealing with any kind of water damage, taking a timely action is crucial...Be sure, that our professional team will respond immediately and will use the most advanced equipment and techniques!
+					.cell-sm-6.cell-lg-3.offset-top-40.offset-lg-top-0
+						+ui-thumbnail-services('services-3-250x167','service-3.html','Emergency Plumbing','')
+							p You simply never know when a faucet may go out of order, a pipe freezes or blows up or a water damage happens. Aware of that factor of surprise, our company works on a 24/7/365 schedule!
+					.cell-sm-6.cell-lg-3.offset-top-40.offset-lg-top-0
+						+ui-thumbnail-services('services-4-250x167','service-4.html','Outdoor Plumbing','')
+							p Our company provides timely and cost-efficient assistance when homeowners are experiencing a number of outdoor plumbing-related problems.
+					hr.hr.hr-gray.hr-fullwidth.offset-top-45
+					.cell-sm-6.cell-lg-3.offset-top-40
+						+ui-thumbnail-services('services-5-250x167','service-5.html','Kitchen Plumbing','')
+							p Today our kitchens are equipped not with one, but with few different kinds of faucets and water supply pipes... We work on fixing any types of kitchen faucets, including,...
+					.cell-sm-6.cell-lg-3.offset-top-40
+						+ui-thumbnail-services('services-6-250x167','service-6.html','Bathroom Plumbing','')
+							p Whatever type of bathroom plumbing issue you're dealing with, our team of seasoned plumbers is sure to fix that,from sinks and faucets to showerheads!
+					.cell-sm-6.cell-lg-3.offset-top-40
+						+ui-thumbnail-services('services-7-250x167','service-7.html','Basement Plumbing','')
+							p Usually, our basements house a lot of plumbing fixtures, all of which need regular maintenance and sometimes, an urgent intervention in order to fix those...
+					.cell-sm-6.cell-lg-3.offset-top-40
+						+ui-thumbnail-services('services-8-250x167','service-8.html',' Laundry Room Plumbing','')
+							p Laundry rooms, which house our residential washing machines are usually the most likely place at your home that may be flooded after a leak.
+
+	// Page Footer
+	include ../elements/_footer-1

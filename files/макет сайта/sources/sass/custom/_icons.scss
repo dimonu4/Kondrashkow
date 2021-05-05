@@ -1,0 +1,109 @@
+//
+// Icons
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.icon {
+  display: inline-block;
+  text-align: center;
+  &:before {
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    font-style: normal;
+    speak: none;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+
+// Alternate icons
+// --------------------------------------------------
+
+.icon-default {
+
+}
+
+.icon-primary {
+  color: $brand-primary;
+  &:hover{
+    color: $gray-dark;
+  }
+}
+.icon-picton-blue {
+  color: $brand-picton-blue;
+}
+
+
+
+
+// Button Sizes
+// --------------------------------------------------
+.page{
+  .icon-xxs{
+    font-size: 11px;
+  }
+  .icon-xs {
+    font-size: 15px;
+    min-width: 15px;
+  }
+  .icon-13{
+    font-size: 13px;
+  }
+
+  .icon-sm {
+    line-height: 1.2;
+    font-size: 22px;
+  }
+
+  .icon-md{
+    font-size: 40px;
+  }
+
+  .icon-lg {
+    font-size: 60px;
+    line-height: 0.8;
+  }
+
+  .icon-xl-1{
+    font-size: 80px;
+    line-height: 0.9;
+  }
+
+  .icon-xl{
+    font-size: 95px;
+    line-height: 0.8;
+  }
+}
+
+//Icon shape
+//------------------------
+
+.icon-rounded-primary{
+  width: 80px;
+  height: 80px;
+  line-height: 82px;
+  border-radius: 50%;
+  border: 2px solid $brand-primary;
+  color: $brand-primary;
+
+  &:hover{
+    color: $white;
+    background-color: $brand-primary;
+  }
+}
+
+.icon-rounded-primary-navbar{
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  border-radius: 50%;
+  background-color:  $brand-primary;
+  color: $white;
+
+
+}

@@ -1,0 +1,150 @@
+include ../elements/_widget-form-search
+// RD Navbar
+.rd-navbar-wrap(class= rd_navbar_class_ajuster)
+
+  nav&attributes(rd_navbar_data_ajuster).rd-navbar
+    button.rd-navbar-collapse-toggle(data-rd-navbar-toggle=".rd-navbar-top-panel" type="submit")
+      span
+    .rd-navbar-top-panel
+      .rd-navbar-top-panel-inner
+        .rd-navbar-address.order-1
+          .unit.unit-horizontal.unit-spacing-xs
+            .unit-left
+              span.icon.icon-xs.text-bay.fa-phone
+            .unit-body.white-space-nowrap
+              span.text-gray.text-middle Call Today: &nbsp;
+              a(href='callto:#').text-base.text-middle 555-123-2323
+              span.text-middle ; &nbsp;
+              a(href='callto:#').text-base.text-middle 555-123-2323
+        .rd-navbar-address.order-2
+          .unit.unit-horizontal.unit-spacing-xs
+            .unit-left
+              span.icon.icon-xs.text-bay.fa-clock-o
+            .unit-body
+              span.text-gray.text-middle Opening Hours: &nbsp;
+              span.text-base.text-middle Mon-Fri: 9am-6pm; Sun: 10am-1pm
+        .rd-navbar-address.order-3
+          ul.list-inline.list-inline-sm
+            li: a(href="#").icon.icon-xxs.icon-primary.fa-facebook
+            li: a(href="#").icon.icon-xxs.icon-primary.fa-twitter
+            li: a(href="#").icon.icon-xxs.icon-primary.fa-google-plus
+            li: a(href="#").icon.icon-xxs.icon-primary.fa-youtube
+            li: a(href="#").icon.icon-xxs.icon-primary.fa-rss
+        .rd-navbar-search
+          +widget-form-search("", "", "blog-sidebar-3-form-search-widget")
+          button.rd-search-form-submit(data-custom-toggle=".rd-search " type="submit")
+    .rd-navbar-main-panel
+      .rd-navbar-inner
+        // RD Navbar Panel
+        .rd-navbar-panel
+          // RD Navbar Toggle
+          button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap' type="submit")
+            span
+          // RD Navbar Brand
+          .rd-navbar-brand
+            a.brand-name(href='index.html')
+              span Plumber
+              span Pro
+        .rd-navbar-address
+          .unit.unit-horizontal.unit-spacing-sm.text-left
+            .unit-left
+              span.icon.icon-rounded-primary-navbar.fa-phone
+            .unit-body.white-space-nowrap
+              p.h5.text-dark.text-middle Call Today: &nbsp;
+              a(href='callto:#').text-base.text-middle 555-123-2323
+              span.text-middle ; &nbsp;
+              a(href='callto:#').text-base.text-middle 555-123-2323
+        .rd-navbar-address
+          .unit.unit-horizontal.unit-spacing-sm.text-left
+            .unit-left
+              span.icon.icon-rounded-primary-navbar.fa-clock-o
+            .unit-body
+              p.h5.text-dark.text-middle Opening Hours: &nbsp;
+              span.text-base.text-middle Mon-Fri: 9am-6pm; Sun: 10am-1pm
+      hr.hr.hr-gray.hr-fullwidth
+      .rd-navbar-nav-inner.justify-between.display-flex.align-center
+
+        .rd-navbar-nav-wrap
+          // RD Navbar Nav
+          ul.rd-navbar-nav
+            li(class=(activeIndex == '1' ? 'active' : ''))
+              a(href='./') Home
+              ul.rd-navbar-dropdown
+                li
+                  a(href="#") Header Settings
+                  ul.rd-navbar-dropdown
+                    li: a(href='header-1.html') Header style 1
+                    li: a(href='header-2.html') Header style 2
+                    li: a(href='header-3.html') Header style 3
+                li
+                  a(href="#") Footer settings
+                  ul.rd-navbar-dropdown
+                    li: a(href='footer-1.html') Footer style 1
+                    li: a(href='footer-2.html') Footer style 2
+                    li: a(href='footer-3.html') Footer style 3
+                li
+                  a(href="#") Pages
+                  ul.rd-navbar-dropdown
+                    li: a(href='pricing.html') Pricing
+                    li: a(href='faq.html') FAQs
+                    li: a(href='404.html') 404
+                    li: a(href='typography.html') Typography
+                    li: a(href='static-elements.html') Static elements
+                    li: a(href='appointment.html') Make an appointment
+
+            li(class=(activeIndex == '2' ? 'active' : ''))
+              a(href='plumbers.html') Plumbers
+              ul.rd-navbar-dropdown
+                li: a(href='plumber-1.html') Kenneth Buick
+                li: a(href='plumber-2.html') Erick Donaughey
+                li: a(href='plumber-3.html') Steven Cooper
+                li: a(href='plumber-4.html') Denis Green
+
+            li(class=(activeIndex == '3' ? 'active' : ''))
+              a(href='services.html') Services
+              ul.rd-navbar-dropdown
+                li: a(href='service-1.html') Commercial Plumbing
+                li: a(href='service-2.html') Water Damage Restoration
+                li: a(href='service-3.html') Emergency Plumbing
+                li: a(href='service-4.html') Outdoor Plumbing
+                li: a(href='service-5.html') Kitchen Plumbing
+                li: a(href='service-6.html') Bathroom Plumbing
+                li: a(href='service-7.html') Basement Plumbing
+                li: a(href='service-8.html') Laundry Room Plumbing
+
+            li(class=(activeIndex == '4' ? 'active' : ''))
+              a(href='news.html') News
+              ul.rd-navbar-dropdown
+                li
+                  a(href="#") Post Formats
+                  ul.rd-navbar-dropdown
+                    li: a(href="post-default.html") Standard Format
+                    li: a(href="post-gallery.html") Gallery Format
+                    li: a(href="post-link.html") Link Format
+                    li: a(href="post-video.html") Video Format
+                    li: a(href="post-quote.html") Quote Format
+                    li: a(href="post-audio.html") Audio Format
+                li
+                  a(href="#") Blog Layout
+                  ul.rd-navbar-dropdown
+                    li: a(href='news.html') Listing Layout
+                    li: a(href='blog-list-2.html') Listing Layout 2
+                    li: a(href='blog-masonry-2col.html') Masonry Layout
+                    li: a(href='blog-masonry-3col.html') Masonry Layout 3 cols
+                    li: a(href='blog-grid-2col.html') Grid Layout
+                    li: a(href='blog-grid-3col.html') Grid Layout 3 cols
+                li
+                  a(href="#") Sidebar Settings
+                  ul.rd-navbar-dropdown
+                    li: a(href='blog-left-sidebar.html')  Left Sidebar
+                    li: a(href='news.html')  Right Sidebar
+                    li: a(href='blog-grid-3col.html') No sidebar
+
+
+            li(class=(activeIndex == '5' ? 'active' : ''))
+              a(href='contact.html') Contacts
+            li.rd-navbar-appointment
+              a(href='appointment.html').btn.btn-md.btn-primary-variant-1 Book an appointment
+
+        .rd-navbar-appointment
+          a(href='appointment.html').btn.btn-md.btn-primary-variant-1 Book an appointment

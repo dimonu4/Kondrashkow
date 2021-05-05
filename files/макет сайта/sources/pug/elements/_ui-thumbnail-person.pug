@@ -1,0 +1,26 @@
+//- Post Widget
+//- url - expanded post link
+//- date - date of publishment
+//- title - post title
+//- image - post image
+
+mixin ui-thumbnail-person(src, url, title,job, aClass)
+  // Post Widget
+  article.post.widget-post.text-left(class= aClass)
+    .thumbnail-variant-2
+      .thumbnail-classic
+        +jpg(src,'img-responsive')
+      .caption
+        .post-title
+          h3.line-height-12
+            a(href=url).text-dark= title
+          .small.text-gray
+            span=job
+        .post-body
+          if block
+            block
+        .post-meta
+          ul.list-inline.list-inline-md
+            li:  a(href='#').icon.icon-primary.fa-facebook
+            li:  a(href='#').icon.icon-primary.fa-twitter
+            li:  a(href='#').icon.icon-primary.fa-google-plus

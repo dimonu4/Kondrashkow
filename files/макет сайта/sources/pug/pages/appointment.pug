@@ -1,0 +1,26 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 0
+	- var page_active = "Make an Appointment"
+	- var rd_navbar_class_ajuster = 'rd-navbar-variant-1'
+	- var section_class_ajuster = "bg-light"
+
+block title
+	title= page_active
+
+block page
+	// Page Header
+	include ../elements/_header-corporate
+		+breadcrumb_items(1,'index.html','Home')
+
+	// Page Content
+	main.page-content.text-left
+		include ../section/appoitment/_section_appointment_1
+
+	// Page Footer
+	include ../elements/_footer-1
+
+
+
+

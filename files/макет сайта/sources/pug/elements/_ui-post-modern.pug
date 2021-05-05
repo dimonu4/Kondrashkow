@@ -1,0 +1,65 @@
+//- Post Classic
+//- url - expanded post link
+//- date - date of publishment
+//- title - post title
+//- author - authors name
+//- authorImg - authors image link
+//- tags - array of {link}
+//- media - {media} object
+
+include ../elements/_ui-thumbnail-classic
+include ../elements/_ui-carousel-gallery-classic
+include ../elements/_ui-video-embed
+include ../elements/_ui-quote
+include ../elements/_widget-post-link
+include ../elements/_ui-soundcloud-player-classic
+
+mixin post-modern(url,title, author, date, tags, text_body, comments, aClass, media)
+ // Post Classic
+ article.post.post-list(class= aClass)
+   // Post media
+   if media
+     .post-image
+       span.icon.mdi.mdi-star-outline
+       case media.type
+         when "gallery"
+           +carousel-gallery-classic(media.images)
+         when "soundcloud"
+           +soundcloud-player-classic(media)
+         when "video"
+           +video-embed(media)
+         when "thumbnail"
+           //- TODO: Remove this wrap on photoswipe init fix
+           div(data-photo-swipe="gallery")
+             +thumbnail-classic(media)
+         when "quote"
+           +ui-quote(media)
+         when "link"
+           +widget-post-link(media)
+         default
+           = ""
+
+   .post-title
+     h4: a(href=url).text-dark= title
+   ul.list-inline.post-meta
+     li
+       span.text-gray.text-middle by &nbsp;
+       a(href=url).text-base.text-middle= author
+     li
+       time.text-middle.text-gray(datetime="2016-01-01")= date
+     if tags
+       li
+         each tag, i in tags
+           a.text-gray.text-middle(href= url)= tag.title
+           - if (i !== (tags.length - 1))
+             = ", "
+
+   .post-body
+     p= text_body
+   .post-footer.display-flex-xs.reverse-xs.justify-between.align-center
+     .post-comments
+       span.icon.text-primary.text-middle.fa-comment &nbsp;
+       a(href=url).text-middle=comments
+     a(href=url).btn.btn-primary.btn-md.text-white.offset-top-15.offset-xs-top-0 Read more
+
+ hr.hr-gray.hr-fullwidth.offset-top-50

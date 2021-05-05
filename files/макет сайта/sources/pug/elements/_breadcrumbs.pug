@@ -1,0 +1,13 @@
+mixin breadcrumb_items(item,href,page_parent,page_child)
+  case item
+    when 1
+      .text-center.text-lg-left
+        ol.breadcrumb
+          li: a(href=href)= page_parent
+          li !{page_active}
+    when 2
+      .text-center.text-lg-left
+        ol.breadcrumb
+          li: a(href=href)= page_parent
+          li: a(href="#")= page_child
+          li !{page_active}

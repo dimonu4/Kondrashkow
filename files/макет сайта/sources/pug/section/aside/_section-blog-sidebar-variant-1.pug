@@ -1,0 +1,105 @@
+//- Includes
+
+include ../../elements/_widget-form-search
+include ../../elements/_widget-tags
+
+// Section Blog Modern
+aside.text-left.offset-top-40.offset-md-top-0
+  // Search Form
+  h4 Search
+  .offset-top-25
+    +widget-form-search("", "form-label-sm", "blog-sidebar-2-form-search-widget")
+
+  .range.offset-top-41
+    .cell-xs-6.cell-md-12
+      //Recent post
+      h4 Recent posts
+      .unit.unit-horizontal.post-recent.offset-top-15
+        .unit-left
+          time(datetime="2016-01-01").text-middle.text-gray April 29,#[br] 2016
+        .unit-body
+          .inset-lg-left-10
+            a(href='post-default.html') Tips for Redesigning Your Bathroom
+
+      .unit.unit-horizontal.post-recent.offset-top-30
+        .unit-left
+          time(datetime="2016-01-01").text-middle.text-gray April 27,#[br] 2016
+        .unit-body
+          .inset-lg-left-10
+            a(href='post-default.html') Choosing a water efficient kitchen faucet
+      .unit.unit-horizontal.post-recent.offset-top-30
+        .unit-left
+          time(datetime="2016-01-01").text-middle.text-gray April 20,#[br] 2016
+        .unit-body
+          .inset-lg-left-10
+            a(href='post-default.html') Do you have kids? Then you need a thermostat!
+
+      .unit.unit-horizontal.post-recent.offset-top-30
+        .unit-left
+          time(datetime="2016-01-01").text-middle.text-gray April 17,#[br] 2016
+        .unit-body
+          .inset-lg-left-10
+            a(href='post-default.html') How to choose the proper dishwashing machine
+      .unit.unit-horizontal.post-recent.offset-top-30
+        .unit-left
+          time(datetime="2016-01-01").text-middle.text-gray April 15,#[br] 2016
+        .unit-body
+          .inset-lg-left-10
+            a(href='post-default.html') Why the laundry machine needs maintenance
+
+
+    .cell-xs-6.cell-md-12.offset-top-41.offset-xs-top-0.offset-md-top-41
+      // Category
+      h4 Categories
+
+      ul.list.list-marked-gray.offset-top-15
+        li
+          a(href="#") Commercial buildings tips
+        li
+          a(href="#") Renovation tips
+        li
+          a(href="#") Residential tips
+        li
+          a(href="#") Water damage
+        li
+          a(href="#") Water supply issues
+
+
+      hr.hr-fullwidth.hr-gray.offset-top-41.veil.reveal-md-block
+    .cell-xs-6.cell-md-12.offset-top-41
+      // Archive
+      h4 Archive
+      .offset-top-15
+        //Select 2
+        select.form-control.select-filter(data-placeholder="Select Month", data-minimum-results-for-search="Infinity", data-constraints="@Required")
+          option(label="Select Month")
+          option(value="2") April 2016
+          option(value="3") May 2016
+
+      hr.hr-fullwidth.hr-gray.offset-top-41.veil.reveal-md-block
+    .cell-xs-6.cell-md-12.offset-top-41
+      // Archive
+      h4 Recent Comments
+      ul.list.list-unstyled.offset-top-15
+        li
+          span.text-base John Popps &nbsp;
+          span.text-gray on &ndash;&nbsp;
+          a(href='post-default.html') Choosing a water efficient kitchen faucet
+        li
+          span.text-base Damien Tools &nbsp;
+          span.text-gray on &ndash;&nbsp;
+          a(href='post-default.html') Choosing a water efficient kitchen faucet
+      hr.hr-fullwidth.hr-gray.offset-top-41.veil.reveal-md-block
+
+  // Tags
+  h4.offset-top-41 Popular Tags
+
+  .offset-top-15
+    +widget-tags("btn btn-xs btn-primary-variant-1 ", [
+      {"title": "dishwashing", "href": "#"},
+      {"title": "faucet", "href": "#"},
+      {"title": "kitchen", "href": "#"},
+      {"title": "pipes", "href": "#"},
+      {"title": "sink", "href": "#"},
+      {"title": "thermostat", "href": "#"}
+    ])

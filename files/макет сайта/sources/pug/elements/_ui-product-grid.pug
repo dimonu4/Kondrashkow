@@ -1,0 +1,44 @@
+//- Default Product
+//- title - title of product
+//- price - product price or array with 2 prices(old and new)
+//- images - array of objects
+
+mixin product-grid(product)
+  - var thumbnails = product.images.length? true : null
+  - var priceArr = typeof(product.price) == 'string' ? true : false
+
+  // Product
+  .product.product-grid
+    // Product Image
+    .product-image
+      img(src=product.images[0].src alt=product.images[0].alt width=product.images[0].width height=product.images[0].height).product-image-area
+
+      // Product Label
+      - if (typeof(product.label) !== "undefined")
+        span.product-label.label-custom.label-lg-custom.label-rounded-custom(class= product.label.adClass)= product.label.text
+    // product stars
+    ul.list-inline.list-inline-mod-1
+      li: span.icon.icon-xs.mdi.mdi-star.icon-warning
+      li: span.icon.icon-xs.mdi.mdi-star.icon-warning
+      li: span.icon.icon-xs.mdi.mdi-star.icon-warning
+      li: span.icon.icon-xs.mdi.mdi-star.icon-warning
+      li: span.icon.icon-xs.mdi.mdi-star-half.icon-warning
+    // Product Title
+    .h4.product-title.offset-top-10
+      a(href= product.link).text-dark= product.title
+    // Product Brand
+    p.product-brand.text-italic.text-dark= product.brand
+    // Product price
+    .product-price.text-bold.offset-top-15
+      if priceArr
+        span.text-dark= '$' + product.price
+      else
+        span.product-price-new.text-dark= "$" + product.price[1]
+        span.product-price-old.text-base= '$' + product.price[0]
+
+
+    .product-block-hover
+      // Product Add To cart
+      a(href= product.link).btn.btn-sm.btn-primary.btn-icon.btn-icon-left.btn-shape-circle.btn-min-width-md.offset-top-20
+        span.icon.mdi.mdi-cart-outline
+        | Add to Cart

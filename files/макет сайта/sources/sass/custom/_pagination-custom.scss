@@ -1,0 +1,187 @@
+.pagination-classic {
+  margin: 0;
+  li {
+    display: inline-block;
+    vertical-align: top;
+    a,
+    span {
+      display: inline-block;
+      width: 24px;
+      padding: 0;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      border: none;
+      border-radius: $border-radius-base;
+      color: $gray-base;
+      transition: .4s;
+    }
+
+    &.active a,
+    &.active a:hover,
+    a:focus,
+    a:hover {
+      background-color: transparent;
+      border-color: transparent;
+      color: $brand-primary;
+    }
+    &.active span,
+    &.active span:hover {
+      background-color: transparent;
+      border-color: transparent;
+      color: $brand-primary;
+    }
+
+    &.disabled a,
+    &.disabled a:hover,
+    &.disabled span,
+    &.disabled span:hover {
+      color: $brand-primary;
+    }
+    & + li {
+      margin-left: 0;
+    }
+  }
+
+  li:first-of-type,
+  li:last-of-type {
+    a,
+    span {
+      position: relative;
+      width: auto;
+      font: 400 16px/24px ;
+      color: $brand-primary;
+      background-color: $body-bg;
+
+      &:before,
+      &:after {
+        font-family: $material;
+        font-size: 24px;
+        vertical-align: bottom;
+        position: relative;
+        z-index: 1;
+        color: $gray-base;
+      }
+
+      &:hover {
+        &:before ,
+        &:after {
+          color: $brand-primary;
+        }
+      }
+    }
+    &.disabled a,
+    &.disabled a:hover,
+    &.disabled span,
+    &.disabled span:hover {
+      color: $gray-base;
+      display: none;
+    }
+  }
+  li:last-of-type {
+    a, span {
+      right: -10px;
+    }
+  }
+  li:first-of-type {
+    a, span {
+      left: -10px;
+    }
+  }
+
+  li:last-of-type a:after,
+  li:last-of-type span:after {
+    content: "\f238";
+    right: 2px;
+    top: 1px;
+  }
+  li:first-of-type a:before,
+  li:first-of-type span:before {
+    content: "\f237";
+    left: -4px;
+  }
+}
+
+// variant-2
+//--------------------------------------------------------
+.pagination-classic-variant-2 {
+  margin: 0;
+  li {
+    display: inline-block;
+    a,
+    span {
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+      padding: 0;
+      font-size: 14px;
+      line-height: 32px;
+      font-weight: 600;
+      font-family: $font-family-base;
+      background-color: $body-bg;
+      //border-radius: $border-radius-large;
+      border: 1px solid $gray-lightest;
+      color: $gray-dark;
+      transition: .4s;
+      //@media (min-width: $screen-sm-min) {
+      //  width: 60px;
+      //  height: 60px;
+      //  line-height: 59px;
+      //}
+    }
+
+    &.active a,
+    &.active a:hover,
+    a:focus,
+    a:hover {
+      background-color: $brand-primary;
+      border-color: $brand-primary;
+      color: $white;
+    }
+    &.active span,
+    &.active span:hover {
+      background-color: $body-bg;
+      color: $gray-base;
+    }
+
+    &.disabled a,
+    &.disabled a:hover,
+    &.disabled span,
+    &.disabled span:hover {
+      color: $gray-base;
+      background-color: $body-bg;
+    }
+    & + li {
+      margin-left: -5px;
+    }
+  }
+  li:first-of-type {
+    a,
+    span {
+      border-radius: $border-radius-small 0 0 $border-radius-small;
+    }
+  }
+  li:last-of-type {
+    a,
+    span {
+      border-radius: 0 $border-radius-small $border-radius-small 0;
+    }
+  }
+  li:first-of-type,
+  li:last-of-type {
+    a,
+    span {
+
+      &:before,
+      &:after {
+        position: relative;
+        top: 1px;
+        display: inline-block;
+        font-family: $material;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1;
+      }
+    }
+  }
+}

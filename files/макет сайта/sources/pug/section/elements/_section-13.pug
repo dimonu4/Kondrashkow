@@ -1,0 +1,43 @@
+section.offset-top-50.offset-sm-top-120.text-center
+  .shell
+    h4.text-center.text-sm-left Countdown Timer
+    .range.offset-top-40
+      .cell-md-8
+        .bg-light.section-top-30.section-bottom-78
+          h4 Use It With A Light Background
+          .offset-top-15
+            // Countdown
+            .countdown(data-type='until', data-time='17 Dec 2016 16:00', data-format='dhms')
+section.offset-top-50.offset-sm-top-120.text-center
+  .shell
+    h4.text-center.text-sm-left Circles Counter
+    .range.offset-top-40
+      .cell-md-8
+        .range.range-xs-center
+          .cell-sm-6
+            // Circle Progress Bar
+            .progress-bar-circle(data-value="0.35", data-gradient="#2388D9, #2388D9", data-empty-fill="rgb(248,248,248)", data-size="245", data-thickness="15")
+              span
+            p.text-gray That's how lower our prices are, as opposed to competitors
+          .cell-sm-6.offset-top-45.offset-sm-top-0
+            // Circle Progress Bar
+            .progress-bar-circle(data-value="0.89", data-gradient="#2388D9, #2388D9", data-empty-fill="rgb(248,248,248)", data-size="245", data-thickness="15")
+              span
+            p.text-gray That's how lower our prices are, as opposed to competitors
+
+section.offset-top-66.offset-sm-top-120.text-center
+  .shell
+    h4.text-center.text-sm-left Number Counter
+    .range.offset-top-40
+      .cell-md-8
+        .range.range-xs-center
+          .cell-sm-4
+            .counter(data-from="0" data-to="10" )
+            p.text-gray.offset-top-20 Only one tenth of our clients never come back again
+          .cell-sm-4.offset-top-45.offset-sm-top-0
+            .counter(data-from="0" data-to="75" )
+            p.text-gray.offset-top-20 Of our plumbers are available all day long
+          .cell-sm-4.offset-top-45.offset-sm-top-0
+            .counter(data-from="0" data-to="9" )
+            p.text-gray.offset-top-20 Of our clients have ordered a session package at least once
+

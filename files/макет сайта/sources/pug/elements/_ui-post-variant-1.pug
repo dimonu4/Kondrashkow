@@ -1,0 +1,22 @@
+//- Post Widget
+//- url - expanded post link
+//- date - date of publishment
+//- title - post title
+//- image - post image
+
+mixin ui-post-variant-1(src, url, title,text_body, date, comments, aClass)
+  // Post Widget
+  article.post.widget-post.text-left(class= aClass)
+    .thumbnail-variant-2
+      .thumbnail-classic
+        +jpg(src,'img-responsive')
+      .caption
+        .post-title
+          h3.line-height-12
+            a(href=url).text-dark= title
+        .post-body
+          p=text_body
+        .post-meta.small
+          time.text-gray.text-middle(datetime="2016-01-01")= date
+          span.text-gray.text-middle &nbsp;-&nbsp;
+          a(href="post-default.html").text-middle=comments
