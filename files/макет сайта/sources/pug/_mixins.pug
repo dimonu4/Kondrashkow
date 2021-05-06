@@ -1,7 +1,0 @@
-mixin grid-col(name)
-  div(style="height: 40px; background: #f0f0f0; font: 700 11px/40px monospace;") #{name}
-
-//- Jpg image
-mixin jpg(name,class_img)
-  - var size = name.split('-').pop().split('x');
-    img(src='images/' + name + '.jpg', alt='', width=size[0], height=size[1], class=class_img)

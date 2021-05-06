@@ -1,7 +1,0 @@
-mixin tags(tags)
-  if tags
-    p.text-primary.text-sm-left.group-lg.group-tags
-      each tag, i in tags
-        a(href= tag.href).btn-link.btn-link-primary.btn-link-variant-1= tag.title
-        - if (i !== (tags.length - 1))
-          = ""
