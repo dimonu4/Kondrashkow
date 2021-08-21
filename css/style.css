@@ -4789,6 +4789,10 @@ a.badge:hover, a.badge:focus {
   padding: 9px;
   color: #7d7d7d;
 }
+.caption ul{
+  list-style:circle;
+  text-align: left;
+}
 
 a.thumbnail:hover,
 a.thumbnail:focus,
@@ -7849,6 +7853,7 @@ html *:last-child {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+
 }
 
 .shell,
@@ -7888,10 +7893,19 @@ html *:last-child {
   margin-left: -15px;
   margin-right: -15px;
 }
+.range .phone{
+  font-weight: 600;
+  font-size:x-large;
+}
 
 .range > .range {
   margin-left: 0;
   margin-right: 0;
+}
+
+.avatar img{
+  width: 200px;
+    margin-left: 100px;
 }
 
 .range-spacer {
@@ -10500,11 +10514,11 @@ address {
 }
 
 @media (min-width: 1200px) {
-  .bg-section-1 {
+  /* .bg-section-1 {
     background-image: url("../images/bg-index-1.jpg");
     background-repeat: no-repeat;
     background-position: 170% top;
-  }
+  } */
 }
 
 @media (min-width: 1400px) {
@@ -10520,8 +10534,9 @@ address {
 }
 
 .bg-banner {
-  background-image: url("../images/bg-index-2.jpg");
-  background-repeat: no-repeat;
+  /* background-image: url("../images/bg-index-2.jpg");
+  background-repeat: no-repeat; */
+  background-color:#2388d9;
 }
 
 @media (max-width: 991px) {
@@ -39448,7 +39463,7 @@ html:not(.lt-ie10) .not-animated {
 
 .rd-navbar-brand span:first-of-type {
   font-weight: 600;
-  text-transform: uppercase;
+  margin-right: 10px;
 }
 
 .rd-navbar-brand span:last-of-type {
