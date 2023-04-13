@@ -18,6 +18,14 @@
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <script src="js/html5shiv.min.js"></script>
 		<![endif]-->
+  <!-- Feedback from VK -->
+  <script src="https://vk.com/js/api/openapi.js?136" type="text/javascript"></script>
+  <script type="text/javascript">
+	window.onload = function () {
+	 VK.init({apiId: 5779390, onlyWidgets: true});
+	 VK.Widgets.Comments('vk_comments', {limit: 15, attach:false}, 321);
+	}
+  </script>
 </head>
 
 <body>
@@ -374,6 +382,13 @@
       <section class="section-50 section-sm-top-90 section-sm-bottom-100 text-left">
         <div class="shell">
           <h2>Довольные клиенты, скажите свое слово!</h2>
+            <div class="otzyv">
+     	    <div id="vk_comments"></div>
+            <script type="text/javascript">
+            VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
+            </script>
+	</div>
+
           <hr class="hr hr-primary divider-lg">
           <div class="range range-xs-center offset-top-40">
             <div class="cell-sm-6 cell-md-4">
