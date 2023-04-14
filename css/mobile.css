@@ -1,5 +1,5 @@
 
-@media and screen(max-width: 420px){
+@media (max-width: 420px){
 	body{
 background-color:red;
 }
@@ -13,7 +13,7 @@ background-color:red;
 	display:block;
 	} */
 }
-@media and screen(min-width: 421px){
+@media (min-width: 421px){
 	body{
 background-color:blue;
 }
