@@ -47944,4 +47944,13 @@ a.pswp__share--download:hover {
 	display:block;
 	}
 }
+@media and screen(min-width: 421px){
+	
+	.swiper-contrainer{
+	display:block;
+	}
+	.mobile-swiper{
+	display:none;
+	}
+}
 /*# sourceMappingURL=style.css.map */
