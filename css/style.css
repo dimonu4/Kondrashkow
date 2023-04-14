@@ -8007,15 +8007,6 @@ html.lt-ie-10 .range-narrow > * + [class*='cell'],
     flex-basis: 100%;
     max-width: 100%;
   }
-  .brand-name{
-		font-size:20px;
-	}
-  .swiper-contrainer{
-	display:none;
-	}
-  .mobile-swiper{
-	display:block;
-	}
 }
 
 @media (min-width: 480px) {
