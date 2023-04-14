@@ -47928,8 +47928,11 @@ a.pswp__share--download:hover {
 	.brand-name{
 		font-size:20px;
 	}
-	.swiper-slide-caption{
+	.swiper-contrainer{
 	display:none;
+	}
+	.mobile-swiper{
+	display:block;
 	}
 }
 /*# sourceMappingURL=style.css.map */
