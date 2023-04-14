@@ -14,18 +14,14 @@
   <link rel="stylesheet" type="text/css"
     href="//fonts.googleapis.com/css?family=Jura:600,300%7CMallanna%7COpen+Sans:400,400italic,700">
   <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/mobile.css">
   <!--[if lt IE 10]>
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <script src="js/html5shiv.min.js"></script>
 		<![endif]-->
   <!-- Feedback from VK -->
 		<script src="https://vk.com/js/api/openapi.js?136" type="text/javascript"></script>
-	<script type="text/javascript">
-		window.onload = function () {
-		 VK.init({apiId: 5779390, onlyWidgets: true});
-		 VK.Widgets.Comments('vk_comments', {limit: 15, attach:false}, 321);
-		}
-	</script>
+	
 <!--   <script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
  
   <script type="text/javascript">
@@ -579,6 +575,12 @@
     </div>
   </div>
   <!-- Java script-->
+<script type="text/javascript">
+		window.onload = function () {
+		 VK.init({apiId: 5779390, onlyWidgets: true});
+		 VK.Widgets.Comments('vk_comments', {limit: 15, attach:false}, 321);
+		}
+	</script>
   <script type="text/javascript">
 	VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
   </script>	
