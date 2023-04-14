@@ -25,5 +25,13 @@ background-color:blue;
 	} */
 }
 body{
-	background-color:"yellow";
+	background-color:yellow;
+}
+
+@media (min-width: 768px) {
+	body{
+	background-color:pink}
+  .lead {
+    font-size: 24px;
+  }
 }
