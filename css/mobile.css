@@ -1,7 +1,8 @@
-body{
+
+@media and screen(max-width: 420px){
+	body{
 background-color:red;
 }
-@media and screen(max-width: 420px){
 	.rd-navbar-brand .brand-name{
 		font-size:21px;
 	}
@@ -13,7 +14,9 @@ background-color:red;
 	}
 }
 @media and screen(min-width: 421px){
-	
+	body{
+background-color:blue;
+}
 	.swiper-contrainer{
 	display:block;
 	}
