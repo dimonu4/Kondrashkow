@@ -9,7 +9,7 @@ background-color:red;
 	div.swiper-container.swiper-slider.swiper-container-horizontal.swiper-container-android{
 	display:none;
 	}
-	.mobile-slider{
+	div.swiper-container.swiper-slider.swiper-container-horizontal.swiper-container-android > div.mobile-slider{
 	display:block;
 	}
 }
@@ -18,10 +18,10 @@ background-color:red;
 	body{
 background-color:blue;
 }
-	.swiper-container .swiper-slider{
+	div.swiper-container.swiper-slider.swiper-container-horizontal.swiper-container-android{
 	display:block;
 	}
-	.mobile-slider{
+	div.swiper-container.swiper-slider.swiper-container-horizontal.swiper-container-android > div.mobile-slider{
 	display:none;
 	}
 }
