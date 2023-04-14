@@ -47934,7 +47934,7 @@ a.pswp__share--download:hover {
 }
 
 @media and screen(max-width: 420px){
-	.brand-name{
+	.rd-navbar-brand .brand-name{
 		font-size:21px;
 	}
 	.swiper-contrainer{
