@@ -6,7 +6,7 @@ background-color:red;
 	.rd-navbar-brand .brand-name{
 		font-size:21px;
 	}
-	.swiper-contrainer{
+	.swiper-container .swiper-slider{
 	display:none;
 	}
 	.mobile-slider{
@@ -18,7 +18,7 @@ background-color:red;
 	body{
 background-color:blue;
 }
-	.swiper-contrainer{
+	.swiper-container .swiper-slider{
 	display:block;
 	}
 	.mobile-slider{
