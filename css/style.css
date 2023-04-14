@@ -47924,4 +47924,9 @@ a.pswp__share--download:hover {
   }
 }
 
+@media and screen(max-width: 420px){
+	.brand-name{
+		font-size:20px;
+	}	
+}
 /*# sourceMappingURL=style.css.map */
