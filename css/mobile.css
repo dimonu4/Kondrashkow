@@ -1,3 +1,6 @@
+body{
+background-color:red;
+}
 @media and screen(max-width: 420px){
 	.rd-navbar-brand .brand-name{
 		font-size:21px;
