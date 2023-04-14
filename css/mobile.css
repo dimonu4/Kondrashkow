@@ -25,14 +25,4 @@ background-color:blue;
 	display:none;
 	} */
 }
-body{
-	background-color:yellow;
-}
 
-@media (min-width: 768px) {
-	body{
-	background-color:pink}
-  .lead {
-    font-size: 24px;
-  }
-}
