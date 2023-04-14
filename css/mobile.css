@@ -3,7 +3,7 @@
 	body{
 background-color:red;
 }
-	.rd-navbar-brand .brand-name{
+/* 	.rd-navbar-brand .brand-name{
 		font-size:21px;
 	}
 	.swiper-contrainer{
@@ -11,16 +11,16 @@ background-color:red;
 	}
 	.mobile-swiper{
 	display:block;
-	}
+	} */
 }
 @media and screen(min-width: 421px){
 	body{
 background-color:blue;
 }
-	.swiper-contrainer{
+/* 	.swiper-contrainer{
 	display:block;
 	}
 	.mobile-swiper{
 	display:none;
-	}
+	} */
 }
