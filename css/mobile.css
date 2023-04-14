@@ -9,7 +9,7 @@ background-color:red;
 	.swiper-contrainer{
 	display:none;
 	}
-	.mobile-swiper{
+	.mobile-slider{
 	display:block;
 	}
 }
@@ -21,7 +21,7 @@ background-color:blue;
 	.swiper-contrainer{
 	display:block;
 	}
-	.mobile-swiper{
+	.mobile-slider{
 	display:none;
 	}
 }
