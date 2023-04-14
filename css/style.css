@@ -47933,9 +47933,9 @@ a.pswp__share--download:hover {
   }
 }
 
-/* @media and screen(max-width: 420px){
+@media and screen(max-width: 420px){
 	.brand-name{
-		font-size:20px;
+		font-size:21px;
 	}
 	.swiper-contrainer{
 	display:none;
@@ -47943,5 +47943,5 @@ a.pswp__share--download:hover {
 	.mobile-swiper{
 	display:block;
 	}
-} */
+}
 /*# sourceMappingURL=style.css.map */
