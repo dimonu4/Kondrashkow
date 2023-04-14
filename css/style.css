@@ -47924,24 +47924,5 @@ a.pswp__share--download:hover {
   }
 }
 
-@media and screen(max-width: 420px){
-	.rd-navbar-brand .brand-name{
-		font-size:21px;
-	}
-	.swiper-contrainer{
-	display:none;
-	}
-	.mobile-swiper{
-	display:block;
-	}
-}
-@media and screen(min-width: 421px){
-	
-	.swiper-contrainer{
-	display:block;
-	}
-	.mobile-swiper{
-	display:none;
-	}
-}
+
 /*# sourceMappingURL=style.css.map */
