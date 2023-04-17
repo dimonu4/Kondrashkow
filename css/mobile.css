@@ -1,4 +1,7 @@
-
+.mobile-fridge {
+  width:100%;
+  height: auto;
+}
 @media (max-width: 425px) {
 	body{
 background-color:red;
