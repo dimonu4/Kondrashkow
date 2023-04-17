@@ -3,9 +3,6 @@
   height: auto;
 }
 @media (max-width: 425px) {
-	body{
-background-color:red;
-}
 	.rd-navbar-brand .brand-name{
 		font-size:21px;
 	}
@@ -18,9 +15,7 @@ background-color:red;
 }
 
 @media (min-width: 426px) {
-	body{
-background-color:blue;
-}
+	
 	div.swiper-container.swiper-slider.swiper-container-horizontal.swiper-container-android{
 	display:block;
 	}
